@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Carrusel de Proyectos - KLM</title>
+<style>
+       html {
+    scroll-behavior: smooth; /* Scroll suave para anclas */
+  } /* Navbar */
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #1a1a1a;
+    padding: 10px 20px;
+  }
+  .logo { color: #ff6f61; font-family: 'Permanent Marker', cursive; font-size: 24px; }
+  nav ul { display: flex; list-style: none; margin: 0; padding: 0; }
+  nav ul li { margin-left: 20px; }
+  nav ul li a { color: #fff; text-decoration: none; font-weight: bold; }
+  nav ul li a:hover { color: #ff6f61; }
+
+   /* Grid de habilidades */
+  .grid-skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 60px;
+  }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+    }
+
+  body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    margin: 0;
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #1a1a1a;
+    padding: 10px 20px;
+  }
+  .logo { color: #ff6f61; font-size: 22px; font-weight: bold; }
+  nav ul { display: flex; list-style: none; margin: 0; padding: 0; }
+  nav ul li { margin-left: 20px; }
+  nav ul li a { color: #fff; text-decoration: none; font-weight: bold; }
+  nav ul li a:hover { color: #ff6f61; }
+
+  .carousel-container {
+    max-width: 800px;
+    margin: 50px auto;
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  }
+
+  .slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .slide {
+    min-width: 100%;
+    box-sizing: border-box;
+    background: #fff;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .slide img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+  .slide h3 {
+    color: #ff6f61;
+    margin: 15px 0 10px;
+  }
+
+  .slide p {
+    line-height: 1.5;
+  }
+
+  .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    font-weight: bold;
+    color: #fff;
+    background: rgba(0,0,0,0.5);
+    padding: 10px 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    user-select: none;
+  }
+  .prev { left: 10px; }
+  .next { right: 10px; }
+
+   /* Sección de contacto */
+  .contact-section {
+    background: #1a1a1a;
+    color: #fff;
+    padding: 50px 20px;
+    text-align: center;
+    margin: 0 auto 50px;  }
+
+  .contact-section h2 {
+    font-family: 'Permanent Marker', cursive;
+    color: #ff6f61;
+    font-size: 36px;
+    margin-bottom: 30px;
+  }
+
+  .contact-section p {
+    font-size: 16px;
+    margin: 10px 0;
+  }
+
+  .contact-section a {
+    color: #ff6f61;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  .contact-section a:hover {
+    text-decoration: underline;
+  }
+</style>
+</head>
+<body>
+
+ <nav>
+    <div class="logo">Ojitos</div>
+    <ul>
+    <li><a href="Index.html">Inicio</a></li>
+      <li><a href="habilidades.html">Habilidades</a></li>
+      <li><a href="Curriculum.html">Proyectos</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </nav>
+
+
+  <!-- Carrusel -->
+  <div class="carousel-container">
+    <div class="slides">
+      <div class="slide">
+        <img src="proyecto_cti.jpg" alt="Proyecto CTI">
+        <h3>Proyecto Web CTI</h3>
+        <p>Desarrollé una página web funcional con HTML y CSS.</p>
+      </div>
+      <div class="slide">
+        <img src="mural_pinacoteca.jpg" alt="Arte Urbano">
+        <h3>Exposición Arte Urbano</h3>
+        <p>Participé en exposiciones colectivas dejando huella en la comunidad.</p>
+      </div>
+      <div class="slide">
+        <img src="futuro.jpg" alt="Proyectos Futuros">
+        <h3>Proyectos Futuros</h3>
+        <p>Planeo mejorar mis habilidades en electrónica y continuar creando arte urbano.</p>
+      </div>
+    </div>
+    <div class="arrow prev" onclick="prevSlide()">❮</div>
+    <div class="arrow next" onclick="nextSlide()">❯</div>
+  </div>
+
+<script>
+ let index = 0;
+const slides = document.querySelector('.slides');
+const total = document.querySelectorAll('.slide').length;
+
+function showSlide(i){
+  index = i;
+  if(index >= total) index = 0;
+  if(index < 0) index = total -1;
+  slides.style.transform = 'translateX(' + (-index*100) + '%)';
+}
+
+function nextSlide(){ showSlide(index+1); }
+function prevSlide(){ showSlide(index-1); }
+
+// setInterval(nextSlide, 5000); ← quitar o comentar
+</script>
+
+</body>
+<!-- Sección de contacto -->
+<div id="contacto" class="contact-section">
+  <h2>📬 Contacto</h2>
+  <p>Email: <a href="mailto:klm@example.com">klm@example.com</a></p>
+  <p>GitHub: <a href="https://github.com/tuusuario" target="_blank">github.com/tuusuario</a></p>
+  <p>LinkedIn: <a href="https://linkedin.com/in/tuusuario" target="_blank">linkedin.com/in/tuusuario</a></p>
+  <p>Redes de arte urbano: @ReflekGang13</p>
+</div>
+<script>
+  
+
+  window.addEventListener('scroll', animateSkills);
+  window.addEventListener('load', animateSkills);
+</script>
+
+</html>

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Habilidades y Contacto - KLM</title>
+<link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+<style>
+  html {
+    scroll-behavior: smooth; /* Scroll suave para anclas */
+  }
+
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    color: #333;
+  }
+
+  /* Navbar */
+  nav {
+    display: flex;
+  flex-wrap: wrap; 
+    justify-content: space-between;
+    align-items: center;
+    background: #0e0000;
+    padding: 10px 20px;
+  }
+  nav ul { display: flex; list-style: none; margin: 0; padding: 0; }
+  nav ul li { margin-left: 20px; }
+  nav ul li a { color: #fff; text-decoration: none; font-weight: bold; }
+  nav ul li a:hover { color: #ff6f61; }
+
+  /* Contenedor principal */
+  .container {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 0 20px;
+  }
+
+  h1 {
+    text-align: center;
+    font-family: 'Permanent Marker', cursive;
+    color: #ff6f61;
+    font-size: 48px;
+    margin-bottom: 50px;
+  }
+
+  /* Grid de habilidades */
+  .grid-skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 60px;
+  }
+
+  /* Tarjetas flotantes */
+  .skill-card {
+    background: #fff;
+    border-radius: 15px;
+    text-align: center;
+    padding: 25px 20px;
+    width: 220px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    transition: transform 0.4s, opacity 0.6s;
+    opacity: 0;
+    transform: translateY(50px) scale(0.95);
+  }
+
+  .skill-card.show {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+
+  .skill-card:hover {
+    transform: translateY(-5px) scale(1.05);
+  }
+
+  .skill-card img {
+    width: 50px;
+    margin-bottom: 15px;
+  }
+
+  .skill-card h3 {
+    margin: 10px 0;
+    color: #ff6f61;
+  }
+
+  .skill-card p {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+  .logo-img {
+  height: 50px;
+  width: 200px;
+}
+
+   /* Sección de contacto */
+  .contact-section {
+    background: #1a1a1a;
+    color: #fff;
+    padding: 50px 20px;
+    text-align: center;
+    margin: 0 auto 50px;  }
+
+
+  .contact-section h2 {
+    font-family: 'Permanent Marker', cursive;
+    color: #ff6f61;
+    font-size: 36px;
+    margin-bottom: 30px;
+  }
+
+  .contact-section p {
+    font-size: 16px;
+    margin: 10px 0;
+  }
+
+  .contact-section a {
+    color: #ff6f61;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  .contact-section a:hover {
+    text-decoration: underline;
+  }
+
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+  <nav>
+  <div>
+  <img src="Logo.png" alt="Ojitos" class="logo-img" >
+</div>
+    <ul>
+    <li><a href="Index.html">Inicio</a></li>
+      <li><a href="habilidades.html">Habilidades</a></li>
+      <li><a href="Curriculum.html">Proyectos</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </nav>
+
+<div class="container">
+  <h1>✨ Mis Habilidades</h1>
+
+  <div class="grid-skills">
+    <!-- Tarjetas flotantes -->
+    <div class="skill-card">
+      <img src="icon_html.png" alt="HTML CSS">
+      <h3>HTML & CSS</h3>
+      <p>Experiencia intermedia creando páginas web y diseños atractivos.</p>
+    </div>
+
+    <div class="skill-card">
+      <img src="icon_js.png" alt="JavaScript">
+      <h3>JavaScript</h3>
+      <p>Desarrollo de interactividad y lógica en sitios web.</p>
+    </div>
+      <div class="skill-card">
+      <img src="icon_robot.png" alt="Electrónica">
+      <h3>Electrónica</h3>
+      <p>Proyectos prácticos como el armado de un robot barredor.</p>
+    </div>
+
+    <div class="skill-card">
+      <img src="icon_team.png" alt="Trabajo en equipo">
+      <h3>Trabajo en Equipo</h3>
+      <p>Coordinación y liderazgo en proyectos grupales y artísticos.</p>
+    </div>
+
+    <div class="skill-card">
+      <img src="icon_fitness.png" alt="Disciplina Personal">
+      <h3>Disciplina Personal</h3>
+      <p>Compromiso con retos personales y ejercicio físico constante.</p>
+    </div>
+
+    <div class="skill-card">
+      <img src="icon_graffiti.png" alt="Arte Urbano">
+      <h3>Arte Urbano</h3>
+      <p>Colaboración con Reflek Gang 13 y exposiciones en Pinacoteca.</p>
+    </div>
+
+  
+
+  </div>
+</div>
+
+<!-- Sección de contacto -->
+<div id="contacto" class="contact-section">
+  <h2>📬 Contacto</h2>
+  <p>Email: <a href="mailto:klm@example.com">klm@example.com</a></p>
+  <p>GitHub: <a href="https://github.com/tuusuario" target="_blank">github.com/tuusuario</a></p>
+  <p>LinkedIn: <a href="https://linkedin.com/in/tuusuario" target="_blank">linkedin.com/in/tuusuario</a></p>
+  <p>Redes de arte urbano: @ReflekGang13</p>
+</div>
+
+<script>
+  const skillCards = document.querySelectorAll('.skill-card');
+
+  function animateSkills() {
+    const trigger = window.innerHeight * 0.85;
+    skillCards.forEach(card => {
+      const top = card.getBoundingClientRect().top;
+      if(top < trigger){
+        card.classList.add('show');
+      }
+    });
+  }
+
+  window.addEventListener('scroll', animateSkills);
+  window.addEventListener('load', animateSkills);
+</script>
+
+</body>
+</html>
+
