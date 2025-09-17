@@ -2,11 +2,11 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Proyectos</title>
+  <title>Blog KLM</title>
   <style>
       html {
-    scroll-behavior: smooth; /* Scroll suave para anclas */
-  }
+        scroll-behavior: smooth;
+      }
    /* Navbar */
   nav {
     display: flex;
@@ -101,6 +101,7 @@
     }
     .card p {
       color: #555;
+      text-align: justify;
     }
     .card a {
       display: inline-block;
@@ -118,8 +119,8 @@
     color: #fff;
     padding: 50px 20px;
     text-align: center;
-    margin: 0 auto 50px;  }
-
+    margin: 0 auto 50px;
+  }
 
   .contact-section h2 {
     font-family: 'Permanent Marker', cursive;
@@ -141,57 +142,87 @@
   .contact-section a:hover {
     text-decoration: underline;
   }
+    
+    .logo-img {
+      height: 50px;
+      width: 200px;
+    }
   </style>
 </head>
 <body>
 
-  <nav>
-    <div class="logo">Ojitos</div>
+    <nav>
+    <div>
+      <img src="Logo.png" alt="Ojitos" class="logo-img">
+    </div>
     <ul>
-    <li><a href="index.html">Inicio</a></li>
-      <li><a href="Habilidades.html">Habilidades</a></li>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="habilidades.html">Habilidades</a></li>
       <li><a href="Curriculum.html">Proyectos</a></li>
       <li><a href="blog.html">Blog</a></li>
       <li><a href="#contacto">Contacto</a></li>
     </ul>
   </nav>
 
-
   <!-- CONTENIDO -->
   <div class="container">
-    <h1>Mis Proyectos</h1>
+    <h1>Dejando Huella - Blog de KLM</h1>
     <div class="grid">
       <div class="card">
-        <h3>Proyecto 1</h3>
-        <p>Un sistema web desarrollado en HTML, CSS y JavaScript para gestión de clientes.</p>
-        <a href="#">Ver más</a>
+        <h3>Mis habilidades</h3>
+        <p>
+          A lo largo de mi camino he trabajado con páginas web y tengo un nivel intermedio en CSS. 
+          Realicé una página para una empresa de CTI. Para mí, programar una web y pintar un mural son experiencias que comparten la misma esencia: 
+          la búsqueda de dejar huella y transmitir algo que trascienda. 
+        </p>
+        <p>
+          Soy artista callejero, colaborando junto a mi pareja <b>Reflek Gang 13</b>. En cada trazo y en cada idea buscamos que el mensaje 
+          que dejamos no solo sea visual, sino emocional y personal. Porque al final, lo que pintamos y creamos es un reflejo de quienes somos.
+        </p>
       </div>
+
       <div class="card">
-        <h3>Proyecto 2</h3>
-        <p>Aplicación móvil creada en Flutter para controlar gastos personales.</p>
-        <a href="#">Ver más</a>
+        <h3>Trayectoria y conexiones</h3>
+        <p>
+          He tenido la fortuna de estar en exposiciones de arte urbano en la Pinacoteca, 
+          compartiendo espacio con artistas increíbles como <b>KontraKultura</b>, quien me inspiró a seguir adelante y me recomendó materiales de calidad 
+          que me ayudaron a mejorar en mi práctica. También recibí el apoyo de <b>YNSA</b>, un gran exponente de propaganda, 
+          que a pesar de la distancia me ha respaldado. 
+        </p>
+        <p>
+          Amistades como <b>Ache Jack</b> en el mundo del graffiti me han acompañado en este viaje, 
+          y familiares como <b>ARA</b>, quien me brindó apoyo emocional y cuya huella aún vive en las calles, 
+          han marcado profundamente mi camino. QEPD, su memoria me da fuerza cada vez que veo sus trazos en los muros.
+        </p>
       </div>
+
       <div class="card">
-        <h3>Proyecto 3</h3>
-        <p>Plataforma de e-commerce con carrito de compras y pasarela de pagos integrada.</p>
-        <a href="#">Ver más</a>
+        <h3>Retos y proyectos personales</h3>
+        <p>
+          A nivel personal, me he enfocado en aprender a adaptarme a trabajos en equipo, en ejercer liderazgo y en sacar adelante proyectos colectivos. 
+          Una de las experiencias más significativas fue participar en un proyecto grupal de electrónica, 
+          donde desarrollamos un robot barredor. Ese reto me demostró que el arte y la tecnología pueden convivir, 
+          y que en ambos ámbitos se necesita paciencia, creatividad y constancia.
+        </p>
+        <p>
+          Entre mis proyectos futuros está seguir perfeccionando mis prácticas en electrónica, 
+          fortalecer mi disciplina con el ejercicio físico y, sobre todo, esforzarme en dejar huella en las calles 
+          a través del arte urbano, manteniendo viva mi esencia y mi estilo.
+        </p>
       </div>
     </div>
   </div>
 
 </body>
+
 <!-- Sección de contacto -->
 <div id="contacto" class="contact-section">
-  <h2>📬 Contacto</h2>
-  <p>Email: <a href="mailto:klm@example.com">klopez44@ucol.mx</a></p>
-  <p>GitHub: <a href="https://github.com/tuusuario" target="_blank">github.com/karenkalm</a></p>
- 
+  <h2>Contacto</h2>
+  <p>Email: <a href="mailto:klopez44@ucol.mx">klopez44@ucol.mx</a></p>
+  <p>GitHub: <a href="https://github.com/karenkalm" target="_blank">github.com/karenkalm</a></p>
 </div>
 
-
 <script>
-  
-
   window.addEventListener('scroll', animateSkills);
   window.addEventListener('load', animateSkills);
 </script>
