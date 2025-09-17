@@ -15,7 +15,7 @@
       background: #f4f4f4;
     }
 
-  /* ================= NAVBAR ================= */
+    /* ================= NAVBAR ================= */
     nav {
       display: flex;
       flex-wrap: wrap;
@@ -50,8 +50,9 @@
       height: 50px;
       width: 200px;
     }
-    /* Contenedor */
-    .container {
+
+    /* Contenedor principal */
+    main {
       max-width: 1100px;
       margin: 40px auto;
       padding: 0 20px;
@@ -59,21 +60,20 @@
 
     h1 {
       text-align: center;
-      color: #333;
-      margin-bottom: 30px;
       font-family: 'Permanent Marker', cursive;
       font-size: 40px;
       color: #ff6f61;
+      margin-bottom: 30px;
     }
 
-    /* Grid de entradas */
+    /* Grid de artículos */
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 25px;
     }
 
-    .card {
+    article {
       background: #fff;
       border-radius: 15px;
       padding: 20px;
@@ -81,22 +81,22 @@
       transition: transform 0.3s, box-shadow 0.3s;
     }
 
-    .card:hover {
+    article:hover {
       transform: translateY(-5px);
       box-shadow: 0px 10px 18px rgba(0,0,0,0.2);
     }
 
-    .card h3 {
+    article h3 {
       margin-top: 0;
       color: #1a1a1a;
     }
 
-    .card p {
+    article p {
       color: #555;
       text-align: justify;
     }
 
-    .card a {
+    article a {
       display: inline-block;
       margin-top: 10px;
       color: #ff6f61;
@@ -104,12 +104,12 @@
       font-weight: bold;
     }
 
-    .card a:hover {
+    article a:hover {
       text-decoration: underline;
     }
 
     /* Sección de contacto */
-    .contact-section {
+    footer {
       background: #1a1a1a;
       color: #fff;
       padding: 50px 20px;
@@ -117,50 +117,52 @@
       margin-top: 50px;
     }
 
-    .contact-section h2 {
+    footer h2 {
       font-family: 'Permanent Marker', cursive;
       color: #ff6f61;
       font-size: 36px;
       margin-bottom: 30px;
     }
 
-    .contact-section p {
+    footer p {
       font-size: 16px;
       margin: 10px 0;
     }
 
-    .contact-section a {
+    footer a {
       color: #ff6f61;
       text-decoration: none;
       font-weight: bold;
     }
 
-    .contact-section a:hover {
+    footer a:hover {
       text-decoration: underline;
     }
   </style>
 </head>
 <body>
 
-  <!-- NAVBAR -->
-  <nav>
-    <div>
-      <img src="Logo.png" alt="Ojitos" class="logo-img">
-    </div>
-    <ul>
-      <li><a href="index.html">Inicio</a></li>
-      <li><a href="Habilidades.html">Habilidades</a></li>
-      <li><a href="Curriculum.html">Proyectos</a></li>
-      <li><a href="blog.html">Blog</a></li>
-      <li><a href="#contacto">Contacto</a></li>
-    </ul>
-  </nav>
+  <!-- HEADER / NAVBAR -->
+  <header>
+    <nav>
+      <div>
+        <img src="Logo.png" alt="Ojitos" class="logo-img">
+      </div>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="Habilidades.html">Habilidades</a></li>
+        <li><a href="Curriculum.html">Proyectos</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  <!-- CONTENIDO -->
-  <div class="container">
+  <!-- MAIN / CONTENIDO -->
+  <main>
     <h1>Blog de KLM</h1>
-    <div class="grid">
-      <div class="card">
+    <section class="grid">
+      <article>
         <h3>Mis habilidades</h3>
         <p>
           A lo largo de mi camino he trabajado con páginas web y tengo un nivel intermedio en CSS. 
@@ -171,9 +173,9 @@
           Soy artista callejero, colaborando junto a mi pareja <b>Reflek Gang 13</b>. En cada trazo y en cada idea buscamos que el mensaje 
           que dejamos no solo sea visual, sino emocional y personal. Porque al final, lo que pintamos y creamos es un reflejo de quienes somos.
         </p>
-      </div>
+      </article>
 
-      <div class="card">
+      <article>
         <h3>Trayectoria y conexiones</h3>
         <p>
           He tenido la fortuna de estar en exposiciones de arte urbano en la Pinacoteca, 
@@ -186,9 +188,9 @@
           y familiares como <b>ARA</b>, quien me brindó apoyo emocional y cuya huella aún vive en las calles, 
           han marcado profundamente mi camino. QEPD, su memoria me da fuerza cada vez que veo sus trazos en los muros.
         </p>
-      </div>
+      </article>
 
-      <div class="card">
+      <article>
         <h3>Retos y proyectos personales</h3>
         <p>
           A nivel personal, me he enfocado en aprender a adaptarme a trabajos en equipo, en ejercer liderazgo y en sacar adelante proyectos colectivos. 
@@ -201,16 +203,16 @@
           fortalecer mi disciplina con el ejercicio físico y, sobre todo, esforzarme en dejar huella en las calles 
           a través del arte urbano, manteniendo viva mi esencia y mi estilo.
         </p>
-      </div>
-    </div>
-  </div>
+      </article>
+    </section>
+  </main>
 
-  <!-- Sección de contacto -->
-  <div id="contacto" class="contact-section">
+  <!-- FOOTER / CONTACTO -->
+  <footer id="contacto">
     <h2>Contacto</h2>
     <p>Email: <a href="mailto:klopez44@ucol.mx">klopez44@ucol.mx</a></p>
     <p>GitHub: <a href="https://github.com/karenkalm" target="_blank">github.com/karenkalm</a></p>
-  </div>
+  </footer>
 
 </body>
 </html>
