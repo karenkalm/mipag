@@ -3,32 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <title>Blog KLM</title>
+  <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
   <style>
-      html {
-        scroll-behavior: smooth;
-      }
-   /* Navbar */
-  nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: #1a1a1a;
-    padding: 10px 20px;
-  }
-  .logo { color: #ff6f61; font-family: 'Permanent Marker', cursive; font-size: 24px; }
-  nav ul { display: flex; list-style: none; margin: 0; padding: 0; }
-  nav ul li { margin-left: 20px; }
-  nav ul li a { color: #fff; text-decoration: none; font-weight: bold; }
-  nav ul li a:hover { color: #ff6f61; }
-
-   /* Grid de habilidades */
-  .grid-skills {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 25px;
-    margin-bottom: 60px;
-  }
+    html {
+      scroll-behavior: smooth;
+    }
 
     body {
       margin: 0;
@@ -36,73 +15,87 @@
       background: #f4f4f4;
     }
 
-    /* Navbar */
+  /* ================= NAVBAR ================= */
     nav {
       display: flex;
+      flex-wrap: wrap;
       justify-content: space-between;
       align-items: center;
-      background: #1a1a1a;
+      background: #0e0000;
       padding: 10px 20px;
     }
-    .logo {
-      color: #fff;
-      font-size: 22px;
-      font-weight: bold;
-    }
+
     nav ul {
       display: flex;
       list-style: none;
       margin: 0;
       padding: 0;
     }
+
     nav ul li {
       margin-left: 20px;
     }
+
     nav ul li a {
       color: #fff;
       text-decoration: none;
-      transition: 0.3s;
+      font-weight: bold;
     }
+
     nav ul li a:hover {
       color: #ff6f61;
     }
 
-    /* Contenido */
+    .logo-img {
+      height: 50px;
+      width: 200px;
+    }
+    /* Contenedor */
     .container {
       max-width: 1100px;
       margin: 40px auto;
       padding: 0 20px;
     }
+
     h1 {
       text-align: center;
       color: #333;
       margin-bottom: 30px;
+      font-family: 'Permanent Marker', cursive;
+      font-size: 40px;
+      color: #ff6f61;
     }
 
-    /* Tarjetas de proyectos */
+    /* Grid de entradas */
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
     }
+
     .card {
       background: #fff;
-      border-radius: 10px;
+      border-radius: 15px;
       padding: 20px;
-      box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
-      transition: transform 0.3s;
+      box-shadow: 0px 6px 12px rgba(0,0,0,0.15);
+      transition: transform 0.3s, box-shadow 0.3s;
     }
+
     .card:hover {
       transform: translateY(-5px);
+      box-shadow: 0px 10px 18px rgba(0,0,0,0.2);
     }
+
     .card h3 {
       margin-top: 0;
       color: #1a1a1a;
     }
+
     .card p {
       color: #555;
       text-align: justify;
     }
+
     .card a {
       display: inline-block;
       margin-top: 10px;
@@ -110,54 +103,53 @@
       text-decoration: none;
       font-weight: bold;
     }
+
     .card a:hover {
       text-decoration: underline;
     }
-  /* Sección de contacto */
-  .contact-section {
-    background: #1a1a1a;
-    color: #fff;
-    padding: 50px 20px;
-    text-align: center;
-    margin: 0 auto 50px;
-  }
 
-  .contact-section h2 {
-    font-family: 'Permanent Marker', cursive;
-    color: #ff6f61;
-    font-size: 36px;
-    margin-bottom: 30px;
-  }
+    /* Sección de contacto */
+    .contact-section {
+      background: #1a1a1a;
+      color: #fff;
+      padding: 50px 20px;
+      text-align: center;
+      margin-top: 50px;
+    }
 
-  .contact-section p {
-    font-size: 16px;
-    margin: 10px 0;
-  }
+    .contact-section h2 {
+      font-family: 'Permanent Marker', cursive;
+      color: #ff6f61;
+      font-size: 36px;
+      margin-bottom: 30px;
+    }
 
-  .contact-section a {
-    color: #ff6f61;
-    text-decoration: none;
-    font-weight: bold;
-  }
-  .contact-section a:hover {
-    text-decoration: underline;
-  }
-    
-    .logo-img {
-      height: 50px;
-      width: 200px;
+    .contact-section p {
+      font-size: 16px;
+      margin: 10px 0;
+    }
+
+    .contact-section a {
+      color: #ff6f61;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .contact-section a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
 
-    <nav>
+  <!-- NAVBAR -->
+  <nav>
     <div>
       <img src="Logo.png" alt="Ojitos" class="logo-img">
     </div>
     <ul>
       <li><a href="index.html">Inicio</a></li>
-      <li><a href="habilidades.html">Habilidades</a></li>
+      <li><a href="Habilidades.html">Habilidades</a></li>
       <li><a href="Curriculum.html">Proyectos</a></li>
       <li><a href="blog.html">Blog</a></li>
       <li><a href="#contacto">Contacto</a></li>
@@ -213,17 +205,12 @@
     </div>
   </div>
 
+  <!-- Sección de contacto -->
+  <div id="contacto" class="contact-section">
+    <h2>Contacto</h2>
+    <p>Email: <a href="mailto:klopez44@ucol.mx">klopez44@ucol.mx</a></p>
+    <p>GitHub: <a href="https://github.com/karenkalm" target="_blank">github.com/karenkalm</a></p>
+  </div>
+
 </body>
-
-<!-- Sección de contacto -->
-<div id="contacto" class="contact-section">
-  <h2>Contacto</h2>
-  <p>Email: <a href="mailto:klopez44@ucol.mx">klopez44@ucol.mx</a></p>
-  <p>GitHub: <a href="https://github.com/karenkalm" target="_blank">github.com/karenkalm</a></p>
-</div>
-
-<script>
-  window.addEventListener('scroll', animateSkills);
-  window.addEventListener('load', animateSkills);
-</script>
 </html>

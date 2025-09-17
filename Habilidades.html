@@ -5,6 +5,7 @@
   <title>Habilidades y Contacto - KLM</title>
   <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
   <style>
+    /* ================= RESET & BASE ================= */
     html {
       scroll-behavior: smooth; /* Scroll suave para anclas */
     }
@@ -16,7 +17,7 @@
       color: #333;
     }
 
-    /* Navbar */
+    /* ================= NAVBAR ================= */
     nav {
       display: flex;
       flex-wrap: wrap;
@@ -46,13 +47,13 @@
     nav ul li a:hover {
       color: #ff6f61;
     }
-    
+
     .logo-img {
       height: 50px;
       width: 200px;
     }
 
-    /* Contenedor principal */
+    /* ================= CONTENEDOR PRINCIPAL ================= */
     .container {
       max-width: 1000px;
       margin: 50px auto;
@@ -67,7 +68,7 @@
       margin-bottom: 50px;
     }
 
-    /* Grid de habilidades */
+    /* ================= GRID DE HABILIDADES ================= */
     .grid-skills {
       display: flex;
       flex-wrap: wrap;
@@ -98,14 +99,16 @@
       transform: translateY(-5px) scale(1.05);
     }
 
-    .skill-card img {
+    /* Imagen y video en tarjetas */
+    .skill-img {
       width: 150px;
+      height: auto;
       margin-bottom: 15px;
     }
 
-    .skill-card video {
+    .skill-video {
       width: 230px;
-      height: auto-fit;
+      height: auto;
       border-radius: 10px;
       margin-bottom: 15px;
     }
@@ -121,8 +124,7 @@
       text-align: justify;
     }
 
-
-    /* Sección de contacto */
+    /* ================= CONTACTO ================= */
     .contact-section {
       background: #1a1a1a;
       color: #fff;
@@ -156,7 +158,7 @@
 </head>
 <body>
 
-  <!-- NAVBAR -->
+  <!-- ================= NAVBAR ================= -->
   <nav>
     <div>
       <img src="Logo.png" alt="Ojitos" class="logo-img">
@@ -170,58 +172,63 @@
     </ul>
   </nav>
 
-  <!-- Contenido principal -->
+  <!-- ================= CONTENIDO PRINCIPAL ================= -->
   <div class="container">
-    <h1> Mis Habilidades</h1>
+    <h1>Mis Habilidades</h1>
 
     <div class="grid-skills">
-      <!-- Tarjetas flotantes -->
+      <!-- Tarjeta 1 -->
       <div class="skill-card">
-        <img src="HTML.jpeg"  height="200" width="500">
+        <img src="HTML.jpeg" alt="HTML y CSS" class="skill-img">
         <h3>HTML & CSS</h3>
-        <p>Experiencia intermedia creando páginas web y diseños atractivos, donde puedo dejar llevar mi inspiracion.</p>
+        <p>Experiencia intermedia creando páginas web y diseños atractivos, donde puedo dejar llevar mi inspiración.</p>
       </div>
 
+      <!-- Tarjeta 2 -->
       <div class="skill-card">
-        <video src="App.mp4" alt="JavaScript" width="300" height="200" autoplay loop muted></video>
+        <video src="App.mp4" class="skill-video" autoplay loop muted></video>
         <h3>Android Studio</h3>
-        <p>Desarrollo de interactividad y lógica en dispositivos moviles.</p>
+        <p>Desarrollo de interactividad y lógica en dispositivos móviles.</p>
       </div>
 
+      <!-- Tarjeta 3 -->
       <div class="skill-card">
-        <video src="Electronica.mp4" alt="Electrónica" autoplay loop muted></video>
+        <video src="Electronica.mp4" class="skill-video" autoplay loop muted></video>
         <h3>Electrónica</h3>
-        <p>Proyectos prácticos como el armado de un robot barredor, donde se maneja mucho el trabajo en equipo</p>
+        <p>Proyectos prácticos como el armado de un robot barredor, donde se maneja mucho el trabajo en equipo.</p>
       </div>
 
+      <!-- Tarjeta 4 -->
       <div class="skill-card">
-        <img src="https://cdn-icons-png.flaticon.com/512/2502/2502447.png" alt="Trabajo en equipo">
+        <img src="https://cdn-icons-png.flaticon.com/512/2502/2502447.png" alt="Trabajo en equipo" class="skill-img">
         <h3>Trabajo en Equipo</h3>
         <p>Colaboración y liderazgo en proyectos grupales y artísticos, fomentando la creatividad colectiva, la organización y el trabajo en equipo.</p>
       </div>
 
+      <!-- Tarjeta 5 -->
       <div class="skill-card">
-        <img src="https://cdn-icons-png.flaticon.com/512/10165/10165579.png" alt="Disciplina Personal">
+        <img src="https://cdn-icons-png.flaticon.com/512/10165/10165579.png" alt="Disciplina Personal" class="skill-img">
         <h3>Disciplina Personal</h3>
         <p>Capacidad para establecer metas claras, administrar el tiempo de manera eficiente y mantener el enfoque en los objetivos, aun frente a retos o distracciones.</p>
       </div>
 
+      <!-- Tarjeta 6 -->
       <div class="skill-card">
-        <video src="Urbano.mp4" alt="Arte Urbano" width="200" height="150" autoplay loop muted></video>
+        <video src="Urbano.mp4" class="skill-video" autoplay loop muted></video>
         <h3>Arte urbano</h3>
         <p>Forjada en la constancia de cada trazo, el respeto por los espacios y la búsqueda de expresar identidad a través de la calle como lienzo.</p>
       </div>
     </div>
   </div>
 
-  <!-- Sección de contacto -->
+  <!-- ================= CONTACTO ================= -->
   <div id="contacto" class="contact-section">
-    <h2>📬 Contacto</h2>
-    <p>Email: <a href="mailto:klm@example.com">klopez44@ucol.mx</a></p>
-    <p>GitHub: <a href="https://github.com/tuusuario" target="_blank">github.com/karenkalm</a></p>
+    <h2>Contacto</h2>
+    <p>Email: <a href="mailto:klopez44@ucol.mx">klopez44@ucol.mx</a></p>
+    <p>GitHub: <a href="https://github.com/karenkalm" target="_blank">github.com/karenkalm</a></p>
   </div>
 
-  <!-- Script animación -->
+  <!-- ================= SCRIPT ANIMACIÓN ================= -->
   <script>
     const skillCards = document.querySelectorAll('.skill-card');
 

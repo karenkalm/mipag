@@ -5,18 +5,18 @@
   <title>Portafolio - KLM</title>
   <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
   <style>
-    /* RESET Y BODY */
+    /* ================= RESET Y BODY ================= */
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
       font-family: Arial, sans-serif;
       background: #f4f4f4;
     }
 
-    html {
-      scroll-behavior: smooth;
-    }
-
-    /* Navbar */
+    /* ================= NAVBAR ================= */
     nav {
       display: flex;
       flex-wrap: wrap;
@@ -46,13 +46,13 @@
     nav ul li a:hover {
       color: #ff6f61;
     }
-    
+
     .logo-img {
       height: 50px;
       width: 200px;
     }
 
-      /* Tarjetas flotantes */
+    /* ================= TARJETAS ================= */
     .skill-Container {
       display: flex;
       flex-wrap: wrap;
@@ -68,7 +68,6 @@
       border-radius: 15px;
       text-align: center;
       padding: 25px 20px;
-      width: auto;
       box-shadow: 0 10px 20px rgba(0,0,0,0.2);
       transition: transform 0.6s, opacity 0.8s;
       opacity: 0;
@@ -84,7 +83,6 @@
       transform: translateY(-5px) scale(1.05);
     }
 
-    .skill-card h3, 
     .skill-card h2 {
       margin: 10px 0;
       color: #ff6f61;
@@ -96,22 +94,24 @@
       text-shadow: #333 0.1em 0.1em 0.2em;
       text-align: center;
     }
-    .skill-card-images {
-  display: flex;       /* coloca las imágenes en fila */
-  gap: 10px;           /* espacio entre imágenes */
-  justify-content: center; /* centra horizontalmente */
-  margin-top: 15px;
-}
 
-.skill-card-images img {
-  width: 80px;        /* ancho fijo para cada imagen */
-  height: 80px;       /* alto fijo */
-  object-fit: cover;  /* mantiene proporción */
-  border-radius: 8px; /* opcional: bordes redondeados */
-}
+    /* Imagenes dentro de las tarjetas */
+    .card-images {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 15px;
+    }
 
+    .card-images img {
+      width: 200px;
+      height: auto;
+      object-fit: cover;
+      border-radius: 8px;
+      cursor: pointer;
+    }
 
-    /* CARRUSEL */
+    /* ================= CARRUSEL ================= */
     .carousel-container {
       max-width: 900px;
       margin: 50px auto;
@@ -138,7 +138,7 @@
       display: block;
     }
 
-    /* TEXTO CENTRADO */
+    /* Texto centrado en carrusel */
     .slide-text {
       position: absolute;
       top: 50%;
@@ -164,7 +164,7 @@
       font-size: 18px;
     }
 
-    /* FLECHAS */
+    /* Flechas */
     .arrow {
       position: absolute;
       top: 50%;
@@ -183,7 +183,7 @@
     .prev { left: 10px; }
     .next { right: 10px; }
 
-    /* Sección de contacto (actualizada solo esta parte) */
+    /* ================= CONTACTO ================= */
     .contact-section {
       background: #1a1a1a;
       color: #fff;
@@ -218,7 +218,7 @@
 </head>
 <body>
 
-  <!-- NAVBAR -->
+  <!-- ================= NAVBAR ================= -->
   <nav>
     <div>
       <img src="Logo.png" alt="Ojitos" class="logo-img">
@@ -231,7 +231,9 @@
       <li><a href="#contacto">Contacto</a></li>
     </ul>
   </nav>
-<div id="carousel" class="carousel-container">
+
+  <!-- ================= CARRUSEL ================= -->
+  <div id="carousel" class="carousel-container">
     <div class="slides">
       <div class="slide">
         <a href="#ProyectoWebCTI">
@@ -268,7 +270,7 @@
     <div class="arrow next" onclick="nextSlide()">❯</div>
   </div>
 
-  <!-- TARJETAS -->
+  <!-- ================= TARJETAS ================= -->
   <div class="skill-Container">
     <div class="skill-card">
       <h2 id="ProyectoWebCTI">Página Web CTI</h2>
@@ -279,34 +281,35 @@
 
     <div class="skill-card">
       <h2 id="Exposicion">Exposición de Arte Urbano Local</h2>
-       <div class="card-images"><img src="https://www.ucol.mx/content/enterate/image/El_IUBA_celebra_el_cierre_de_semestre_con_una_intensa_agenda_art__stica_c.jpg" alt="Exposición Arte Urbano" width="auto" height="200" href="https://www.ucol.mx/noticias/nota_13938.htm">
-     <img src="PINACOTECA.jpeg" alt="Exposición Arte Urbano" width="auto" height="200" href="https://www.ucol.mx/noticias/nota_13938.htm">
-    
-  </div>
-       <p>Urbanía fue la Semana de las Artes Visuales organizada por estudiantes de la Licenciatura en Artes Visuales del IUBA, con actividades como exposiciones, talleres, conferencias y mesas de diálogo</p>
-      <p>El tema se centró en el arte urbano, la identidad de la ciudad, la apropiación del espacio público y cómo el arte visual dialoga con lo urbano: lo cotidiano, lo que nos rodea</p>
-      <p>Una exposición llamada “Tuneando barrio: Identidad en las calles” resaltó: prácticas de street art, intervención urbana, reflexión sobre lo efímero vs lo permanente, lo espontáneo vs lo institucional</p>
-      <p>En esta exposiciones fui parte al representar un poco el street art acompañado de Reflek Gang 13</p>
+      <div class="card-images">
+        <img src="https://www.ucol.mx/content/enterate/image/El_IUBA_celebra_el_cierre_de_semestre_con_una_intensa_agenda_art__stica_c.jpg" alt="Exposición Arte Urbano">
+        <img src="PINACOTECA.jpeg" alt="Exposición Arte Urbano">
+      </div>
+      <p>Urbanía fue la Semana de las Artes Visuales organizada por estudiantes del IUBA, con exposiciones, talleres y conferencias.</p>
+      <p>El tema se centró en el arte urbano, la identidad de la ciudad y cómo el arte dialoga con lo cotidiano.</p>
+      <p>Una exposición llamada “Tuneando barrio: Identidad en las calles” resaltó el street art y la reflexión sobre lo efímero vs lo permanente.</p>
+      <p>En esta exposición participé representando el street art junto a Reflek Gang 13.</p>
     </div>
 
     <div class="skill-card">
       <h2 id="Robot">Robot barredor</h2>
-       <div class="card-images"><img src="https://www.ucol.mx/content/enterate/image/Desarrollan_prototipos_de_robots_barredores_Jorge_y_Karen.jpg" alt="Robot" width="auto" height="200" href="https://www.ucol.mx/noticias/nota_12688.htm">
-     <img src="https://www.ucol.mx/content/enterate/image/Desarrollan_prototipos_de_robots_barredores_b.jpg" alt="Exposición Arte Urbano" width="auto" height="200" href="https://www.ucol.mx/noticias/nota_12688.htm">
-    
-  </div>
-      <p>En el proyecto, contribuí en la construcción y ensamblaje de los robots utilizando materiales como cables, reguladores, motores, PVC, policarbonato, pilas recargables de ion litio, llantas y aspas. Además, trabajé en la programación y coordinación de los motores y sistemas de control, asegurando que los robots pudieran moverse de manera autónoma y recoger residuos de manera eficiente.</p>
-</div>
-  
+      <div class="card-images">
+        <img src="https://www.ucol.mx/content/enterate/image/Desarrollan_prototipos_de_robots_barredores_Jorge_y_Karen.jpg" alt="Robot barredor">
+        <img src="https://www.ucol.mx/content/enterate/image/Desarrollan_prototipos_de_robots_barredores_b.jpg" alt="Robot barredor">
+      </div>
+      <p>Contribuí en la construcción y ensamblaje de los robots utilizando cables, reguladores, motores, PVC, policarbonato y más.</p>
+      <p>Además, trabajé en la programación y coordinación de los motores y sistemas de control, logrando autonomía y eficiencia en la recolección de residuos.</p>
+    </div>
   </div>
 
-  <!-- Sección de contacto -->
+  <!-- ================= CONTACTO ================= -->
   <div id="contacto" class="contact-section">
-    <h2> Contacto</h2>
-    <p>Email: <a href="mailto:klm@example.com">klopez44@ucol.mx</a></p>
-    <p>GitHub: <a href="https://github.com/tuusuario" target="_blank">github.com/karenkalm</a></p>
+    <h2>Contacto</h2>
+    <p>Email: <a href="mailto:klopez44@ucol.mx">klopez44@ucol.mx</a></p>
+    <p>GitHub: <a href="https://github.com/karenkalm" target="_blank">github.com/karenkalm</a></p>
   </div>
 
+  <!-- ================= SCRIPT ================= -->
   <script>
     // --- CARRUSEL ---
     let index = 0;
