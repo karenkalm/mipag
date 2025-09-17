@@ -5,9 +5,8 @@
   <title>Habilidades y Contacto - KLM</title>
   <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
   <style>
-    /* ================= RESET & BASE ================= */
     html {
-      scroll-behavior: smooth; /* Scroll suave para anclas */
+      scroll-behavior: smooth;
     }
 
     body {
@@ -54,7 +53,7 @@
     }
 
     /* ================= CONTENEDOR PRINCIPAL ================= */
-    .container {
+    main {
       max-width: 1000px;
       margin: 50px auto;
       padding: 0 20px;
@@ -69,7 +68,7 @@
     }
 
     /* ================= GRID DE HABILIDADES ================= */
-    .grid-skills {
+    section.grid-skills {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
@@ -78,7 +77,7 @@
     }
 
     /* Tarjetas flotantes */
-    .skill-card {
+    article.skill-card {
       background: #fff;
       border-radius: 15px;
       text-align: center;
@@ -90,16 +89,15 @@
       transform: translateY(50px) scale(0.95);
     }
 
-    .skill-card.show {
+    article.skill-card.show {
       opacity: 1;
       transform: translateY(0) scale(1);
     }
 
-    .skill-card:hover {
+    article.skill-card:hover {
       transform: translateY(-5px) scale(1.05);
     }
 
-    /* Imagen y video en tarjetas */
     .skill-img {
       width: 150px;
       height: auto;
@@ -113,19 +111,19 @@
       margin-bottom: 15px;
     }
 
-    .skill-card h3 {
+    article.skill-card h3 {
       margin: 10px 0;
       color: #ff6f61;
     }
 
-    .skill-card p {
+    article.skill-card p {
       font-size: 14px;
       line-height: 1.4;
       text-align: justify;
     }
 
     /* ================= CONTACTO ================= */
-    .contact-section {
+    footer.contact-section {
       background: #1a1a1a;
       color: #fff;
       padding: 50px 20px;
@@ -133,100 +131,102 @@
       margin: 0 auto 50px;
     }
 
-    .contact-section h2 {
+    footer.contact-section h2 {
       font-family: 'Permanent Marker', cursive;
       color: #ff6f61;
       font-size: 36px;
       margin-bottom: 30px;
     }
 
-    .contact-section p {
+    footer.contact-section p {
       font-size: 16px;
       margin: 10px 0;
     }
 
-    .contact-section a {
+    footer.contact-section a {
       color: #ff6f61;
       text-decoration: none;
       font-weight: bold;
     }
 
-    .contact-section a:hover {
+    footer.contact-section a:hover {
       text-decoration: underline;
     }
   </style>
 </head>
 <body>
 
-  <!-- ================= NAVBAR ================= -->
-  <nav>
-    <div>
-      <img src="Logo.png" alt="Ojitos" class="logo-img">
-    </div>
-    <ul>
-      <li><a href="index.html">Inicio</a></li>
-      <li><a href="habilidades.html">Habilidades</a></li>
-      <li><a href="Curriculum.html">Proyectos</a></li>
-      <li><a href="blog.html">Blog</a></li>
-      <li><a href="#contacto">Contacto</a></li>
-    </ul>
-  </nav>
+  <!-- ================= HEADER / NAVBAR ================= -->
+  <header>
+    <nav>
+      <div>
+        <img src="Logo.png" alt="Ojitos" class="logo-img">
+      </div>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="habilidades.html">Habilidades</a></li>
+        <li><a href="Curriculum.html">Proyectos</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  <!-- ================= CONTENIDO PRINCIPAL ================= -->
-  <div class="container">
+  <!-- ================= MAIN / CONTENIDO ================= -->
+  <main>
     <h1>Mis Habilidades</h1>
 
-    <div class="grid-skills">
+    <section class="grid-skills">
       <!-- Tarjeta 1 -->
-      <div class="skill-card">
+      <article class="skill-card">
         <img src="HTML.jpeg" alt="HTML y CSS" class="skill-img">
         <h3>HTML & CSS</h3>
         <p>Experiencia intermedia creando páginas web y diseños atractivos, donde puedo dejar llevar mi inspiración.</p>
-      </div>
+      </article>
 
       <!-- Tarjeta 2 -->
-      <div class="skill-card">
+      <article class="skill-card">
         <video src="App.mp4" class="skill-video" autoplay loop muted></video>
         <h3>Android Studio</h3>
         <p>Desarrollo de interactividad y lógica en dispositivos móviles.</p>
-      </div>
+      </article>
 
       <!-- Tarjeta 3 -->
-      <div class="skill-card">
+      <article class="skill-card">
         <video src="Electronica.mp4" class="skill-video" autoplay loop muted></video>
         <h3>Electrónica</h3>
         <p>Proyectos prácticos como el armado de un robot barredor, donde se maneja mucho el trabajo en equipo.</p>
-      </div>
+      </article>
 
       <!-- Tarjeta 4 -->
-      <div class="skill-card">
+      <article class="skill-card">
         <img src="https://cdn-icons-png.flaticon.com/512/2502/2502447.png" alt="Trabajo en equipo" class="skill-img">
         <h3>Trabajo en Equipo</h3>
         <p>Colaboración y liderazgo en proyectos grupales y artísticos, fomentando la creatividad colectiva, la organización y el trabajo en equipo.</p>
-      </div>
+      </article>
 
       <!-- Tarjeta 5 -->
-      <div class="skill-card">
+      <article class="skill-card">
         <img src="https://cdn-icons-png.flaticon.com/512/10165/10165579.png" alt="Disciplina Personal" class="skill-img">
         <h3>Disciplina Personal</h3>
         <p>Capacidad para establecer metas claras, administrar el tiempo de manera eficiente y mantener el enfoque en los objetivos, aun frente a retos o distracciones.</p>
-      </div>
+      </article>
 
       <!-- Tarjeta 6 -->
-      <div class="skill-card">
+      <article class="skill-card">
         <video src="Urbano.mp4" class="skill-video" autoplay loop muted></video>
         <h3>Arte urbano</h3>
         <p>Forjada en la constancia de cada trazo, el respeto por los espacios y la búsqueda de expresar identidad a través de la calle como lienzo.</p>
-      </div>
-    </div>
-  </div>
+      </article>
+    </section>
+  </main>
 
-  <!-- ================= CONTACTO ================= -->
-  <div id="contacto" class="contact-section">
+  <!-- ================= FOOTER / CONTACTO ================= -->
+  <footer id="contacto" class="contact-section">
     <h2>Contacto</h2>
     <p>Email: <a href="mailto:klopez44@ucol.mx">klopez44@ucol.mx</a></p>
     <p>GitHub: <a href="https://github.com/karenkalm" target="_blank">github.com/karenkalm</a></p>
-  </div>
+  </footer>
 
   <!-- ================= SCRIPT ANIMACIÓN ================= -->
   <script>
