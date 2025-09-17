@@ -6,7 +6,7 @@
   <title>Inicio - KLM</title>
   <style>
     html {
-      scroll-behavior: smooth; /* Scroll suave */
+      scroll-behavior: smooth;
     }
 
     /* ===== BODY / FONDO ===== */
@@ -16,21 +16,16 @@
       color: #9f0000;
       background: url("Fondo.jpeg") no-repeat center center;
       background-size: cover;
-      background-attachment: fixed; /* fijo en PC */
+      background-attachment: fixed;
     }
 
     @media (max-width: 768px) {
       body {
-        background-attachment: scroll; /* corrige fondo en móviles */
+        background-attachment: scroll;
       }
     }
 
-
-    .logo-img {
-      max-height: 50px;
-      width: auto;
-    }
-    /* Navbar */
+    /* ===== NAVBAR ===== */
     nav {
       display: flex;
       flex-wrap: wrap;
@@ -39,12 +34,11 @@
       background: #0e0000;
       padding: 10px 20px;
     }
-    
+
     .logo-img {
       height: 50px;
       width: 200px;
     }
-
 
     nav ul {
       display: flex;
@@ -68,7 +62,7 @@
     }
 
     /* ===== CONTENEDOR PRINCIPAL ===== */
-    .container {
+    main.container {
       max-width: 900px;
       margin: 50px auto;
       padding: 0 20px;
@@ -76,23 +70,22 @@
       color: #f4f4f4;
     }
 
-    h1 {
+    main h1 {
       font-size: 36px;
       margin-bottom: 10px;
     }
 
-    h2 {
+    main h2 {
       color: #ffe5e5;
       margin-bottom: 20px;
     }
 
-    p {
+    main p {
       font-size: 18px;
       line-height: 1.6;
       font-style: italic;
     }
 
-    /* Imagen Ojos */
     .img-ojos {
       max-width: 90%;
       height: auto;
@@ -101,7 +94,7 @@
     }
 
     /* ===== CONTACTO ===== */
-    .contact-section {
+    footer.contact-section {
       background: #000000;
       color: #fff;
       padding: 50px 20px;
@@ -109,47 +102,49 @@
       margin: 0 auto 0;
     }
 
-    .contact-section h2 {
+    footer.contact-section h2 {
       font-family: 'Permanent Marker', cursive;
       color: #ff6f61;
       font-size: 36px;
       margin-bottom: 30px;
     }
 
-    .contact-section p {
+    footer.contact-section p {
       font-size: 16px;
       margin: 10px 0;
     }
 
-    .contact-section a {
+    footer.contact-section a {
       color: #ff6f61;
       text-decoration: none;
       font-weight: bold;
     }
 
-    .contact-section a:hover {
+    footer.contact-section a:hover {
       text-decoration: underline;
     }
   </style>
 </head>
 <body>
 
-  <!-- NAVBAR -->
-  <nav>
-    <div>
-      <img src="Logo.png" alt="Logo KLM" class="logo-img">
-    </div>
-    <ul>
-      <li><a href="index.html">Inicio</a></li>
-      <li><a href="Habilidades.html">Habilidades</a></li>
-      <li><a href="Curriculum.html">Proyectos</a></li>
-      <li><a href="blog.html">Blog</a></li>
-      <li><a href="#contacto">Contacto</a></li>
-    </ul>
-  </nav>
+  <!-- ===== HEADER / NAVBAR ===== -->
+  <header>
+    <nav>
+      <div>
+        <img src="Logo.png" alt="Logo KLM" class="logo-img">
+      </div>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="Habilidades.html">Habilidades</a></li>
+        <li><a href="Curriculum.html">Proyectos</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  <!-- BIENVENIDA -->
-  <div class="container">
+  <!-- ===== MAIN / BIENVENIDA ===== -->
+  <main class="container">
     <h1>Dejando Huella</h1>
     <h2>KLM</h2>
     <img src="OjosKARENLM.png" alt="Arte KLM" class="img-ojos">
@@ -163,15 +158,14 @@
       Mi pasión combina la tecnología y el arte urbano; creo que cada línea de código y cada mural 
       tiene el poder de dejar una huella que inspire a otros.
     </p>
-  </div>
+  </main>
 
-  <!-- CONTACTO -->
-  <div id="contacto" class="contact-section">
+  <!-- ===== FOOTER / CONTACTO ===== -->
+  <footer id="contacto" class="contact-section">
     <h2>Contacto</h2>
     <p>Email: <a href="mailto:klopez44@ucol.mx">klopez44@ucol.mx</a></p>
     <p>GitHub: <a href="https://github.com/karenkalm" target="_blank">github.com/karenkalm</a></p>
-    
-  </div>
+  </footer>
 
 </body>
 </html>
