@@ -1,141 +1,168 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<title>Habilidades y Contacto - KLM</title>
-<link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
-<style>
-  html {
-    scroll-behavior: smooth; /* Scroll suave para anclas */
-  }
+  <meta charset="UTF-8">
+  <title>Habilidades y Contacto - KLM</title>
+  <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+  <style>
+    html {
+      scroll-behavior: smooth; /* Scroll suave para anclas */
+    }
 
-  body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #f4f4f4;
-    color: #333;
-  }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      color: #333;
+    }
 
-  /* Navbar */
-  nav {
-    display: flex;
-  flex-wrap: wrap; 
-    justify-content: space-between;
-    align-items: center;
-    background: #0e0000;
-    padding: 10px 20px;
-  }
-  nav ul { display: flex; list-style: none; margin: 0; padding: 0; }
-  nav ul li { margin-left: 20px; }
-  nav ul li a { color: #fff; text-decoration: none; font-weight: bold; }
-  nav ul li a:hover { color: #ff6f61; }
+    /* Navbar */
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      background: #0e0000;
+      padding: 10px 20px;
+    }
 
-  /* Contenedor principal */
-  .container {
-    max-width: 1000px;
-    margin: 50px auto;
-    padding: 0 20px;
-  }
+    nav ul {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
 
-  h1 {
-    text-align: center;
-    font-family: 'Permanent Marker', cursive;
-    color: #ff6f61;
-    font-size: 48px;
-    margin-bottom: 50px;
-  }
+    nav ul li {
+      margin-left: 20px;
+    }
 
-  /* Grid de habilidades */
-  .grid-skills {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 25px;
-    margin-bottom: 60px;
-  }
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
 
-  /* Tarjetas flotantes */
-  .skill-card {
-    background: #fff;
-    border-radius: 15px;
-    text-align: center;
-    padding: 25px 20px;
-    width: 220px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-    transition: transform 0.4s, opacity 0.6s;
-    opacity: 0;
-    transform: translateY(50px) scale(0.95);
-  }
+    nav ul li a:hover {
+      color: #ff6f61;
+    }
+    
+    .logo-img {
+      height: 50px;
+      width: 200px;
+    }
 
-  .skill-card.show {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
+    /* Contenedor principal */
+    .container {
+      max-width: 1000px;
+      margin: 50px auto;
+      padding: 0 20px;
+    }
 
-  .skill-card:hover {
-    transform: translateY(-5px) scale(1.05);
-  }
+    h1 {
+      text-align: center;
+      font-family: 'Permanent Marker', cursive;
+      color: #ff6f61;
+      font-size: 48px;
+      margin-bottom: 50px;
+    }
 
-  .skill-card img {
-    width: 50px;
-    margin-bottom: 15px;
-  }
+    /* Grid de habilidades */
+    .grid-skills {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 25px;
+      margin-bottom: 60px;
+    }
 
-  .skill-card h3 {
-    margin: 10px 0;
-    color: #ff6f61;
-  }
+    /* Tarjetas flotantes */
+    .skill-card {
+      background: #fff;
+      border-radius: 15px;
+      text-align: center;
+      padding: 25px 20px;
+      width: 220px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+      transition: transform 0.4s, opacity 0.6s;
+      opacity: 0;
+      transform: translateY(50px) scale(0.95);
+    }
 
-  .skill-card p {
-    font-size: 14px;
-    line-height: 1.4;
-  }
-  .logo-img {
-  height: 50px;
-  width: 200px;
-}
+    .skill-card.show {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
 
-   /* Sección de contacto */
-  .contact-section {
-    background: #1a1a1a;
-    color: #fff;
-    padding: 50px 20px;
-    text-align: center;
-    margin: 0 auto 50px;  }
+    .skill-card:hover {
+      transform: translateY(-5px) scale(1.05);
+    }
+
+    .skill-card img {
+      width: 150px;
+      margin-bottom: 15px;
+    }
+
+    .skill-card video {
+      width: 230px;
+      height: auto-fit;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+    .skill-card h3 {
+      margin: 10px 0;
+      color: #ff6f61;
+    }
+
+    .skill-card p {
+      font-size: 14px;
+      line-height: 1.4;
+      text-align: justify;
+    }
 
 
-  .contact-section h2 {
-    font-family: 'Permanent Marker', cursive;
-    color: #ff6f61;
-    font-size: 36px;
-    margin-bottom: 30px;
-  }
+    /* Sección de contacto */
+    .contact-section {
+      background: #1a1a1a;
+      color: #fff;
+      padding: 50px 20px;
+      text-align: center;
+      margin: 0 auto 50px;
+    }
 
-  .contact-section p {
-    font-size: 16px;
-    margin: 10px 0;
-  }
+    .contact-section h2 {
+      font-family: 'Permanent Marker', cursive;
+      color: #ff6f61;
+      font-size: 36px;
+      margin-bottom: 30px;
+    }
 
-  .contact-section a {
-    color: #ff6f61;
-    text-decoration: none;
-    font-weight: bold;
-  }
-  .contact-section a:hover {
-    text-decoration: underline;
-  }
+    .contact-section p {
+      font-size: 16px;
+      margin: 10px 0;
+    }
 
-</style>
+    .contact-section a {
+      color: #ff6f61;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .contact-section a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
 
-<!-- NAVBAR -->
+  <!-- NAVBAR -->
   <nav>
-  <div>
-  <img src="Logo.png" alt="Ojitos" class="logo-img" >
-</div>
+    <div>
+      <img src="Logo.png" alt="Ojitos" class="logo-img">
+    </div>
     <ul>
-    <li><a href="index.html">Inicio</a></li>
+      <li><a href="index.html">Inicio</a></li>
       <li><a href="habilidades.html">Habilidades</a></li>
       <li><a href="Curriculum.html">Proyectos</a></li>
       <li><a href="blog.html">Blog</a></li>
@@ -143,76 +170,74 @@
     </ul>
   </nav>
 
-<div class="container">
-  <h1>✨ Mis Habilidades</h1>
+  <!-- Contenido principal -->
+  <div class="container">
+    <h1> Mis Habilidades</h1>
 
-  <div class="grid-skills">
-    <!-- Tarjetas flotantes -->
-    <div class="skill-card">
-      <img src="icon_html.png" alt="HTML CSS">
-      <h3>HTML & CSS</h3>
-      <p>Experiencia intermedia creando páginas web y diseños atractivos.</p>
-    </div>
-
-    <div class="skill-card">
-      <img src="icon_js.png" alt="JavaScript">
-      <h3>JavaScript</h3>
-      <p>Desarrollo de interactividad y lógica en sitios web.</p>
-    </div>
+    <div class="grid-skills">
+      <!-- Tarjetas flotantes -->
       <div class="skill-card">
-      <img src="icon_robot.png" alt="Electrónica">
-      <h3>Electrónica</h3>
-      <p>Proyectos prácticos como el armado de un robot barredor.</p>
+        <img src="HTML.jpeg"  height="200" width="500">
+        <h3>HTML & CSS</h3>
+        <p>Experiencia intermedia creando páginas web y diseños atractivos, donde puedo dejar llevar mi inspiracion.</p>
+      </div>
+
+      <div class="skill-card">
+        <video src="App.mp4" alt="JavaScript" width="300" height="200" autoplay loop muted></video>
+        <h3>Android Studio</h3>
+        <p>Desarrollo de interactividad y lógica en dispositivos moviles.</p>
+      </div>
+
+      <div class="skill-card">
+        <video src="Electronica.mp4" alt="Electrónica" autoplay loop muted></video>
+        <h3>Electrónica</h3>
+        <p>Proyectos prácticos como el armado de un robot barredor, donde se maneja mucho el trabajo en equipo</p>
+      </div>
+
+      <div class="skill-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/2502/2502447.png" alt="Trabajo en equipo">
+        <h3>Trabajo en Equipo</h3>
+        <p>Colaboración y liderazgo en proyectos grupales y artísticos, fomentando la creatividad colectiva, la organización y el trabajo en equipo.</p>
+      </div>
+
+      <div class="skill-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/10165/10165579.png" alt="Disciplina Personal">
+        <h3>Disciplina Personal</h3>
+        <p>Capacidad para establecer metas claras, administrar el tiempo de manera eficiente y mantener el enfoque en los objetivos, aun frente a retos o distracciones.</p>
+      </div>
+
+      <div class="skill-card">
+        <video src="Urbano.mp4" alt="Arte Urbano" width="200" height="150" autoplay loop muted></video>
+        <h3>Arte urbano</h3>
+        <p>Forjada en la constancia de cada trazo, el respeto por los espacios y la búsqueda de expresar identidad a través de la calle como lienzo.</p>
+      </div>
     </div>
-
-    <div class="skill-card">
-      <img src="icon_team.png" alt="Trabajo en equipo">
-      <h3>Trabajo en Equipo</h3>
-      <p>Coordinación y liderazgo en proyectos grupales y artísticos.</p>
-    </div>
-
-    <div class="skill-card">
-      <img src="icon_fitness.png" alt="Disciplina Personal">
-      <h3>Disciplina Personal</h3>
-      <p></p>
-    </div>
-
-    <div class="skill-card">
-      <img src="icon_graffiti.png" alt="Arte Urbano">
-      <h3></h3>
-      <p></p>
-    </div>
-
-  
-
   </div>
-</div>
 
-<!-- Sección de contacto -->
-<div id="contacto" class="contact-section">
-  <h2>📬 Contacto</h2>
-  <p>Email: <a href="mailto:klm@example.com">klopez44@ucol.mx</a></p>
-  <p>GitHub: <a href="https://github.com/tuusuario" target="_blank">github.com/karenkalm</a></p>
- 
-</div>
+  <!-- Sección de contacto -->
+  <div id="contacto" class="contact-section">
+    <h2>📬 Contacto</h2>
+    <p>Email: <a href="mailto:klm@example.com">klopez44@ucol.mx</a></p>
+    <p>GitHub: <a href="https://github.com/tuusuario" target="_blank">github.com/karenkalm</a></p>
+  </div>
 
-<script>
-  const skillCards = document.querySelectorAll('.skill-card');
+  <!-- Script animación -->
+  <script>
+    const skillCards = document.querySelectorAll('.skill-card');
 
-  function animateSkills() {
-    const trigger = window.innerHeight * 0.85;
-    skillCards.forEach(card => {
-      const top = card.getBoundingClientRect().top;
-      if(top < trigger){
-        card.classList.add('show');
-      }
-    });
-  }
+    function animateSkills() {
+      const trigger = window.innerHeight * 0.85;
+      skillCards.forEach(card => {
+        const top = card.getBoundingClientRect().top;
+        if (top < trigger) {
+          card.classList.add('show');
+        }
+      });
+    }
 
-  window.addEventListener('scroll', animateSkills);
-  window.addEventListener('load', animateSkills);
-</script>
+    window.addEventListener('scroll', animateSkills);
+    window.addEventListener('load', animateSkills);
+  </script>
 
 </body>
 </html>
-
