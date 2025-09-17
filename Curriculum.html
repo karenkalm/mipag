@@ -1,212 +1,341 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<title>Carrusel de Proyectos - KLM</title>
-<style>
-       html {
-    scroll-behavior: smooth; /* Scroll suave para anclas */
-  } /* Navbar */
-  nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: #1a1a1a;
-    padding: 10px 20px;
-  }
-  .logo { color: #ff6f61; font-family: 'Permanent Marker', cursive; font-size: 24px; }
-  nav ul { display: flex; list-style: none; margin: 0; padding: 0; }
-  nav ul li { margin-left: 20px; }
-  nav ul li a { color: #fff; text-decoration: none; font-weight: bold; }
-  nav ul li a:hover { color: #ff6f61; }
-
-   /* Grid de habilidades */
-  .grid-skills {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 25px;
-    margin-bottom: 60px;
-  }
-
+  <meta charset="UTF-8">
+  <title>Portafolio - KLM</title>
+  <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+  <style>
+    /* RESET Y BODY */
     body {
       margin: 0;
       font-family: Arial, sans-serif;
       background: #f4f4f4;
     }
 
-  body {
-    font-family: Arial, sans-serif;
-    background: #f4f4f4;
-    margin: 0;
-  }
+    html {
+      scroll-behavior: smooth;
+    }
 
-  nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: #1a1a1a;
-    padding: 10px 20px;
-  }
-  .logo { color: #ff6f61; font-size: 22px; font-weight: bold; }
-  nav ul { display: flex; list-style: none; margin: 0; padding: 0; }
-  nav ul li { margin-left: 20px; }
-  nav ul li a { color: #fff; text-decoration: none; font-weight: bold; }
-  nav ul li a:hover { color: #ff6f61; }
+    /* Navbar */
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      background: #0e0000;
+      padding: 10px 20px;
+    }
 
-  .carousel-container {
-    max-width: 800px;
-    margin: 50px auto;
-    position: relative;
-    overflow: hidden;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-  }
+    nav ul {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
 
-  .slides {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-  }
+    nav ul li {
+      margin-left: 20px;
+    }
 
-  .slide {
-    min-width: 100%;
-    box-sizing: border-box;
-    background: #fff;
-    text-align: center;
-    padding: 20px;
-  }
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
 
-  .slide img {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-    border-radius: 10px;
-  }
+    nav ul li a:hover {
+      color: #ff6f61;
+    }
+    
+    .logo-img {
+      height: 50px;
+      width: 200px;
+    }
 
-  .slide h3 {
-    color: #ff6f61;
-    margin: 15px 0 10px;
-  }
+      /* Tarjetas flotantes */
+    .skill-Container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin: 50px auto;
+      max-width: 1200px;
+      padding: 0 20px;
+    }
 
-  .slide p {
-    line-height: 1.5;
-  }
+    .skill-card {
+      background: #fff;
+      border-radius: 15px;
+      text-align: center;
+      padding: 25px 20px;
+      width: auto;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+      transition: transform 0.6s, opacity 0.8s;
+      opacity: 0;
+      transform: translateY(50px) scale(0.95);
+    }
 
-  .arrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 30px;
-    font-weight: bold;
-    color: #fff;
-    background: rgba(0,0,0,0.5);
-    padding: 10px 15px;
-    border-radius: 50%;
-    cursor: pointer;
-    user-select: none;
-  }
-  .prev { left: 10px; }
-  .next { right: 10px; }
+    .skill-card.show {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
 
-   /* Sección de contacto */
-  .contact-section {
-    background: #1a1a1a;
-    color: #fff;
-    padding: 50px 20px;
-    text-align: center;
-    margin: 0 auto 50px;  }
+    .skill-card:hover {
+      transform: translateY(-5px) scale(1.05);
+    }
 
-  .contact-section h2 {
-    font-family: 'Permanent Marker', cursive;
-    color: #ff6f61;
-    font-size: 36px;
-    margin-bottom: 30px;
-  }
+    .skill-card h3, 
+    .skill-card h2 {
+      margin: 10px 0;
+      color: #ff6f61;
+    }
 
-  .contact-section p {
-    font-size: 16px;
-    margin: 10px 0;
-  }
+    .skill-card p {
+      font-size: 14px;
+      line-height: 1.4;
+      text-shadow: #333 0.1em 0.1em 0.2em;
+      text-align: center;
+    }
+    .skill-card-images {
+  display: flex;       /* coloca las imágenes en fila */
+  gap: 10px;           /* espacio entre imágenes */
+  justify-content: center; /* centra horizontalmente */
+  margin-top: 15px;
+}
 
-  .contact-section a {
-    color: #ff6f61;
-    text-decoration: none;
-    font-weight: bold;
-  }
-  .contact-section a:hover {
-    text-decoration: underline;
-  }
-</style>
+.skill-card-images img {
+  width: 80px;        /* ancho fijo para cada imagen */
+  height: 80px;       /* alto fijo */
+  object-fit: cover;  /* mantiene proporción */
+  border-radius: 8px; /* opcional: bordes redondeados */
+}
+
+
+    /* CARRUSEL */
+    .carousel-container {
+      max-width: 900px;
+      margin: 50px auto;
+      position: relative;
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    .slides {
+      display: flex;
+      transition: transform 0.6s ease-in-out;
+    }
+
+    .slide {
+      min-width: 100%;
+      position: relative;
+    }
+
+    .slide img {
+      width: 100%;
+      height: 400px; 
+      object-fit: cover;
+      display: block;
+    }
+
+    /* TEXTO CENTRADO */
+    .slide-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #fff;
+      text-align: center;
+      background: rgba(0,0,0,0.5);
+      padding: 20px;
+      border-radius: 12px;
+      max-width: 80%;
+    }
+
+    .slide-text h2 {
+      margin: 0 0 10px;
+      font-family: 'Permanent Marker', cursive;
+      font-size: 32px;
+      color: #ff6f61;
+    }
+
+    .slide-text p {
+      margin: 0;
+      font-size: 18px;
+    }
+
+    /* FLECHAS */
+    .arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 30px;
+      font-weight: bold;
+      color: #fff;
+      background: rgba(0,0,0,0.5);
+      padding: 10px 15px;
+      border-radius: 50%;
+      cursor: pointer;
+      user-select: none;
+      z-index: 2;
+    }
+
+    .prev { left: 10px; }
+    .next { right: 10px; }
+
+    /* Sección de contacto (actualizada solo esta parte) */
+    .contact-section {
+      background: #1a1a1a;
+      color: #fff;
+      padding: 50px 20px;
+      text-align: center;
+      margin: 0 auto 50px;
+    }
+
+    .contact-section h2 {
+      font-family: 'Permanent Marker', cursive;
+      color: #ff6f61;
+      font-size: 36px;
+      margin-bottom: 30px;
+    }
+
+    .contact-section p {
+      font-size: 16px;
+      margin: 10px 0;
+    }
+
+    .contact-section a {
+      color: #ff6f61;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .contact-section a:hover {
+      text-decoration: underline;
+    }
+
+  </style>
 </head>
 <body>
 
- <nav>
-    <div class="logo">Ojitos</div>
+  <!-- NAVBAR -->
+  <nav>
+    <div>
+      <img src="Logo.png" alt="Ojitos" class="logo-img">
+    </div>
     <ul>
-    <li><a href="index.html">Inicio</a></li>
-      <li><a href="Habilidades.html">Habilidades</a></li>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="habilidades.html">Habilidades</a></li>
       <li><a href="Curriculum.html">Proyectos</a></li>
       <li><a href="blog.html">Blog</a></li>
       <li><a href="#contacto">Contacto</a></li>
     </ul>
   </nav>
-
-
-  <!-- Carrusel -->
-  <div class="carousel-container">
+<div id="carousel" class="carousel-container">
     <div class="slides">
       <div class="slide">
-        <img src="proyecto_cti.jpg" alt="Proyecto CTI">
-        <h3>Proyecto Web CTI</h3>
-        <p>Desarrollé una página web funcional con HTML y CSS.</p>
+        <a href="#ProyectoWebCTI">
+          <img src="HTML.jpeg" alt="Proyecto CTI">
+        </a>
+        <div class="slide-text">
+          <h2>Proyecto Web CTI</h2>
+          <p>Desarrollé una página web funcional con HTML y CSS.</p>
+        </div>
       </div>
+
       <div class="slide">
-        <img src="mural_pinacoteca.jpg" alt="Arte Urbano">
-        <h3>Exposición Arte Urbano</h3>
-        <p>Participé en exposiciones colectivas dejando huella en la comunidad.</p>
+        <a href="#Exposicion">
+          <img src="PINACOTECA.jpeg" alt="Arte Urbano">
+        </a>
+        <div class="slide-text">
+          <h2>Exposición Arte Urbano</h2>
+          <p>Participé en exposiciones colectivas dejando huella en la comunidad.</p>
+        </div>
       </div>
+
       <div class="slide">
-        <img src="futuro.jpg" alt="Proyectos Futuros">
-        <h3>Proyectos Futuros</h3>
-        <p>Planeo mejorar mis habilidades en electrónica y continuar creando arte urbano.</p>
+        <a href="#Robot">
+          <img src="Robot.jpeg" alt="Robot barredor">
+        </a>
+        <div class="slide-text">
+          <h2>Robot barredor</h2>
+          <p>Representando mi equipo de trabajo donde se realizó con un gran propósito.</p>
+        </div>
       </div>
     </div>
+
     <div class="arrow prev" onclick="prevSlide()">❮</div>
     <div class="arrow next" onclick="nextSlide()">❯</div>
   </div>
 
-<script>
- let index = 0;
-const slides = document.querySelector('.slides');
-const total = document.querySelectorAll('.slide').length;
+  <!-- TARJETAS -->
+  <div class="skill-Container">
+    <div class="skill-card">
+      <h2 id="ProyectoWebCTI">Página Web CTI</h2>
+      <p>Proyecto elaborado en equipo hacia la empresa CTI, quienes nos dieron apoyo y monitoreo. 
+         La página aún no se publica debido a problemas con la empresa.</p>
+      <p>Este proyecto fue desarrollado con un gran equipo, lo que nos brindó experiencia y aprendizaje.</p>
+    </div>
 
-function showSlide(i){
-  index = i;
-  if(index >= total) index = 0;
-  if(index < 0) index = total -1;
-  slides.style.transform = 'translateX(' + (-index*100) + '%)';
-}
+    <div class="skill-card">
+      <h2 id="Exposicion">Exposición de Arte Urbano Local</h2>
+       <div class="card-images"><img src="https://www.ucol.mx/content/enterate/image/El_IUBA_celebra_el_cierre_de_semestre_con_una_intensa_agenda_art__stica_c.jpg" alt="Exposición Arte Urbano" width="auto" height="200" href="https://www.ucol.mx/noticias/nota_13938.htm">
+     <img src="PINACOTECA.jpeg" alt="Exposición Arte Urbano" width="auto" height="200" href="https://www.ucol.mx/noticias/nota_13938.htm">
+    
+  </div>
+       <p>Urbanía fue la Semana de las Artes Visuales organizada por estudiantes de la Licenciatura en Artes Visuales del IUBA, con actividades como exposiciones, talleres, conferencias y mesas de diálogo</p>
+      <p>El tema se centró en el arte urbano, la identidad de la ciudad, la apropiación del espacio público y cómo el arte visual dialoga con lo urbano: lo cotidiano, lo que nos rodea</p>
+      <p>Una exposición llamada “Tuneando barrio: Identidad en las calles” resaltó: prácticas de street art, intervención urbana, reflexión sobre lo efímero vs lo permanente, lo espontáneo vs lo institucional</p>
+      <p>En esta exposiciones fui parte al representar un poco el street art acompañado de Reflek Gang 13</p>
+    </div>
 
-function nextSlide(){ showSlide(index+1); }
-function prevSlide(){ showSlide(index-1); }
+    <div class="skill-card">
+      <h2 id="Robot">Robot barredor</h2>
+       <div class="card-images"><img src="https://www.ucol.mx/content/enterate/image/Desarrollan_prototipos_de_robots_barredores_Jorge_y_Karen.jpg" alt="Robot" width="auto" height="200" href="https://www.ucol.mx/noticias/nota_12688.htm">
+     <img src="https://www.ucol.mx/content/enterate/image/Desarrollan_prototipos_de_robots_barredores_b.jpg" alt="Exposición Arte Urbano" width="auto" height="200" href="https://www.ucol.mx/noticias/nota_12688.htm">
+    
+  </div>
+      <p>En el proyecto, contribuí en la construcción y ensamblaje de los robots utilizando materiales como cables, reguladores, motores, PVC, policarbonato, pilas recargables de ion litio, llantas y aspas. Además, trabajé en la programación y coordinación de los motores y sistemas de control, asegurando que los robots pudieran moverse de manera autónoma y recoger residuos de manera eficiente.</p>
+</div>
+  
+  </div>
 
-// setInterval(nextSlide, 5000); ← quitar o comentar
-</script>
+  <!-- Sección de contacto -->
+  <div id="contacto" class="contact-section">
+    <h2>📬 Contacto</h2>
+    <p>Email: <a href="mailto:klm@example.com">klopez44@ucol.mx</a></p>
+    <p>GitHub: <a href="https://github.com/tuusuario" target="_blank">github.com/karenkalm</a></p>
+  </div>
+
+  <script>
+    // --- CARRUSEL ---
+    let index = 0;
+    const slides = document.querySelector('.slides');
+    const total = document.querySelectorAll('.slide').length;
+
+    function showSlide(i) {
+      index = i;
+      if (index >= total) index = 0;
+      if (index < 0) index = total - 1;
+      slides.style.transform = 'translateX(' + (-index * 100) + '%)';
+    }
+
+    function nextSlide() { showSlide(index + 1); }
+    function prevSlide() { showSlide(index - 1); }
+
+    // --- TARJETAS CON ANIMACIÓN ---
+    const cards = document.querySelectorAll('.skill-card');
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        }
+      });
+    }, { threshold: 0.2 });
+
+    cards.forEach(card => observer.observe(card));
+  </script>
 
 </body>
-<!-- Sección de contacto -->
-<div id="contacto" class="contact-section">
-  <h2>📬 Contacto</h2>
-  <p>Email: <a href="mailto:klm@example.com">klopez44@ucol.mx</a></p>
-  <p>GitHub: <a href="https://github.com/tuusuario" target="_blank">github.com/karenkalm</a></p>
- 
-</div>
-
-<script>
-  
-
-  window.addEventListener('scroll', animateSkills);
-  window.addEventListener('load', animateSkills);
-</script>
-
 </html>
